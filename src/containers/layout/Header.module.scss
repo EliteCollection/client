@@ -1,0 +1,38 @@
+.header{
+  height: 64px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  background: #fff;
+  text-align: center;
+  justify-content: space-between;
+  padding:0 30px;
+}
+.lf{
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.rt{
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.logo{
+  width: 32px;
+  height: 32px;
+  background: url('../../images/logo.png');
+  background-size: 100% 100%;
+  margin-right: 6px;
+}
+.theme{
+  padding: 0 20px;
+  height: 100%;
+  line-height: 64px;
+}
+.user{
+  padding: 0 20px;
+}
+.mg{
+ margin-right: 6px;
+}

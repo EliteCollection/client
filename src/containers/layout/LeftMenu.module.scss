@@ -1,0 +1,26 @@
+@import'../../styles/variable.scss';
+.menu{
+  border-radius: 5px;
+  border:1px solid #eeeeee;
+  width: 200px;
+  background: #fff;
+  padding: 15px 0;
+  line-height: 2.6;
+  overflow: hidden;
+  overflow-y: scroll;
+  color:#aaa;
+}
+.menuTitle{
+  padding-left: 20px;
+}
+.menuItem{
+  padding-left: 35px;
+  &:hover{
+    cursor: pointer;
+    color:$lightPrimary;
+  }
+}
+.activeItem{
+  color:$primary;
+  font-weight: 600;
+}
