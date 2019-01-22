@@ -2,55 +2,40 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
+import { withRouter } from 'react-router-dom';
+
 import styles from './LeftMenu.module.scss'
 export class LeftMenu extends Component {
   constructor(props) {
     super(props)
-  
     this.state = {
-      activeMenu: ''
+      activeMenuPath:''
     }
   }
-  
+  componentWillMount() {
+    this.setState({
+      activeMenuPath: this.props.location.pathname
+    })
+  }
+  componentWillReceiveProps(nextProps) {
+    const { pathname } = nextProps.location
+    if(pathname !== this.props.location.pathname) {
+      this.setState({
+        activeMenuPath: pathname
+      })
+    }
+  }
   static propTypes = {
     theme: PropTypes.string
   }
   changeMenu(item) {
-    this.setState({
-      activeMenu: item.title
-    })
+    if(item.path === this.props.location.pathname) return
+    this.props.history.push({pathname:item.path, search:'theme=red'})
   }
   render() {
     const { menu, menuTitle, menuItem, activeItem } = styles
-    const activeMenu = this.state.activeMenu || '个人中心'
-    const array =[
-      {
-        title: '基础',
-        children: [
-          { title: '个人中心', key: '1-1'},
-          { title: '加班管理', key: '1-2'},
-          { title: '微博周报', key: '1-3'}
-        ]
-      },
-      {
-        title: '人事', 
-        children: [
-          { title: '人事统计', key: '2-1'},
-          { title: '员工异动', key: '2-2'},
-          { title: '离职管理', key: '2-3'},
-          { title: '转正管理', key: '2-4'},
-        ]
-      },
-      {
-        title: '项目', 
-        children: [
-          { title: '项目统计', key: '3-1'},
-          { title: '项目申请', key: '3-2'},
-          { title: '项目列表', key: '3-3'},
-          { title: '归档项目', key: '3-4'},
-        ]
-      }
-    ]
+    const activeMenuPath = this.state.activeMenuPath || '/personal'
+    let array = require('../../mockdata/menu')
     return (
         <div className={menu}>
           {
@@ -63,7 +48,7 @@ export class LeftMenu extends Component {
                       return (
                         <div 
                           key={`${index}${childIndex}`}  
-                          className={ (activeMenu === child.title) ? `${menuItem} ${activeItem}` : menuItem }
+                          className={ (activeMenuPath === child.path) ? `${menuItem} ${activeItem}` : menuItem }
                           onClick={()=>{this.changeMenu(child)}}
                         >
                           {child.title}
@@ -88,4 +73,4 @@ const mapDispatchToProps = {
   
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(LeftMenu)
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(LeftMenu))
