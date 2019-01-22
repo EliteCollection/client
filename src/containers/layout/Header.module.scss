@@ -1,5 +1,6 @@
+@import'../../styles/variables.scss';
 .header{
-  height: 64px;
+  height: $headerHeight;
   display: flex;
   align-items: center;
   border-bottom: 1px solid #eee;
@@ -23,16 +24,16 @@
   height: 32px;
   background: url('../../images/logo.png');
   background-size: 100% 100%;
-  margin-right: 6px;
+  margin-right: $marginSize;
 }
 .theme{
   padding: 0 20px;
   height: 100%;
-  line-height: 64px;
+  line-height: $headerHeight;
 }
 .user{
   padding: 0 20px;
 }
 .mg{
- margin-right: 6px;
+ margin-right: $marginSize;
 }

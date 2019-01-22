@@ -11,7 +11,7 @@ $bigerSize:16px;//0.48
 $bigestSize:18px;
 $smallSize:12px;
 // margin大小
-$marginSize: 8px;
+$marginSize: 6px;
 // 基本字体色彩
 $grayText: #999;
 $lightText: #FFF;
@@ -31,7 +31,7 @@ $darkPrimary:#2b85e4;
 // 中性色
 $title:#17233d;
 $content: #515a6e;
-$subColor:#808695;
+$subColor:#c4c9d6;
 $disabled:#c5c8ce;
 $border:#dcdee2;
 $divider:#e8eaec;
@@ -43,3 +43,7 @@ $lightDivision:#F5F7F9;
 // 黑白主题背景
 $darkBg:$title;
 $lightBg:#FFF;
+
+// 头部高度
+$headerHeight: 64px;
+$yMargin: 20px;

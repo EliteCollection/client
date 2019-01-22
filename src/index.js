@@ -15,6 +15,11 @@ import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 // 异步
 import thunkMiddleware from 'redux-thunk'
 import { createLogger } from 'redux-logger'
+// 设置语言
+import moment from 'moment';
+import 'moment/locale/zh-cn';
+moment.locale('zh-cn');
+
 const loggerMiddleware = createLogger() // redux 运行的轨迹
 
 const store = createStore(rootReducer, applyMiddleware(thunkMiddleware, loggerMiddleware))
