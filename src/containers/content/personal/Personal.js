@@ -2,7 +2,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import styles from './index.module.scss'
+import styles from './Personal.module.scss'
 
 import ShortcutEntry from './ShortcutEntry'
 export class Personal extends Component {

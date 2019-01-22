@@ -16,7 +16,7 @@ export class ShortcutEntry extends Component {
         {
           entryArray.map((item,index) => {
             return (
-              <div className={`${styles.itemBox} pointer`} key={index}>
+              <div className={`${styles.itemBox} pointer btn`} key={index}>
                 {item}
               </div>
             )

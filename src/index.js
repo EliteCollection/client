@@ -3,12 +3,15 @@ import ReactDOM from 'react-dom';
 import './styles/common.scss';
 import 'antd/dist/antd.css';
 import App from './containers/App';
+import Login from './containers/login/Login'
 import * as serviceWorker from './serviceWorker';
 // redux 
 // init
 import { Provider } from 'react-redux'
 import { createStore, applyMiddleware } from 'redux'
 import rootReducer from './reducers'
+// router
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 // 异步
 import thunkMiddleware from 'redux-thunk'
 import { createLogger } from 'redux-logger'
@@ -18,7 +21,12 @@ const store = createStore(rootReducer, applyMiddleware(thunkMiddleware, loggerMi
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <Router>
+      <Switch>
+        <Route path="/login" component={Login}/>
+        <Route path="/" component={App} />
+      </Switch>
+    </Router>
   </Provider>, 
   document.getElementById('root')
 );
