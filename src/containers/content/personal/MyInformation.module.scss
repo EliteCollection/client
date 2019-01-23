@@ -4,10 +4,14 @@
 .informationCss{
   margin: 30px 0;
   font-size: 14px;
+  // display: flex;
+}
+.topContentCss{
+  margin: 30px 0;
   display: flex;
   justify-content: space-between;
 }
-.topContentCss{
+.lfContentCss{
   display: flex;
   flex: 1;
   .headCss{
@@ -49,10 +53,33 @@
     }
   }
 }
-.botContentCss{
+.rtContentCss{
   flex: 1;
   margin-left: 100px;
-  line-height: 2;
+  line-height: 2.5;
+  .iconCss{
+    margin-right: 8px;
+    color:#fff;
+    padding: 5px;
+    border-radius: 50%;
+    background: $lightPrimary;
+  }
+}
+.botContentCss{
+  .titleCss{
+    color:$grayText;
+  }
+  margin-left: 5px;
+  .flexContent{
+    padding:20px;
+    color: $content;
+    border-radius: $radiusSize;
+    margin: 20px 15px;
+    background: $bg;
+    display: flex;
+    justify-content: space-between;
+
+  }
 }
 
 
