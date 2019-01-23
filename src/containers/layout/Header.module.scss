@@ -13,26 +13,33 @@
   height: 100%;
   display: flex;
   align-items: center;
+  width: 170px;
 }
 .rt{
   height: 100%;
   display: flex;
   align-items: center;
+  width: 170px;
+  font-size: 14px;
+  justify-content: right;
 }
 .logo{
   width: 32px;
   height: 32px;
   background: url('../../images/logo.png');
   background-size: 100% 100%;
-  margin-right: $marginSize;
+  margin-right: 15px;
 }
 .theme{
-  padding: 0 20px;
+  padding: 0 10px;
   height: 100%;
   line-height: $headerHeight;
 }
 .user{
   padding: 0 20px;
+}
+.name{
+  font-size: 16px;
 }
 .mg{
  margin-right: $marginSize;

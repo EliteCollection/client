@@ -4,7 +4,8 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import styles from './Personal.module.scss'
 
-import ShortcutEntry from './ShortcutEntry'
+
+import MyInformation from './MyInformation'
 import MyAttendance from './MyAttendance'
 
 export class Personal extends Component {
@@ -15,9 +16,9 @@ export class Personal extends Component {
   render() {
     return (
       <div className={styles.personalCss}>
-        <div className="title">快捷入口</div>
-        <ShortcutEntry></ShortcutEntry>
-        <div className="title">我的考勤</div>
+        <div className="title">个人资料</div>
+        <MyInformation></MyInformation>
+        <div className="title">数据总览</div>
         <MyAttendance></MyAttendance>
       </div>
     )

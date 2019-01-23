@@ -1,0 +1,58 @@
+@import'../../../styles/variables.scss';
+@import'../../../styles/mixin.scss';
+
+.informationCss{
+  margin: 30px 0;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+}
+.topContentCss{
+  display: flex;
+  flex: 1;
+  .headCss{
+    width: 100px;
+    height: 100px;
+    &.boy{
+      @include imgBg('../../../images/user/boy.png')
+    }
+    &.girl{
+      @include imgBg('../../../images/user/girl.png')
+    }
+  }
+  .basicInfoCss{
+    flex: 1;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .username{
+      display: flex;
+      justify-content: space-between;
+      .editCss{
+        color:$primary;
+        cursor: pointer;
+      }
+      color: $grayText;
+      .nameText{
+        margin-right: 8px;
+        color: $content;
+      }
+    }
+    .line{
+      border-top: 1px solid #eee;
+      height: 1px;
+      margin: 12px 0;
+    }
+    .userdept{
+      color: $grayText;
+    }
+  }
+}
+.botContentCss{
+  flex: 1;
+  margin-left: 100px;
+  line-height: 2;
+}
+
+

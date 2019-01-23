@@ -1,0 +1,17 @@
+@import'../../styles/variables.scss';
+.entryBox{
+  display: flex;
+  margin: $yMargin 0;
+}
+.itemBox{
+  margin-right:20px;
+  width: 70px;
+  height: 64px;
+  line-height: 64px;
+  text-align: center;
+  color:#333;
+  border-radius: $radiusSize;
+  &:hover{
+    color:$primary;
+  }
+}

@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import moment from 'moment';
 
 import { Radio, DatePicker } from 'antd';
+import Pie from '../../../components/echarts/Pie'
 
 import css from './MyAttendance.module.scss'
 
@@ -85,17 +86,30 @@ export class MyAttendance extends Component {
           </div>
         </div>
         <div className={css.contentCss}>
+          {/* <div className={css.itemBoxCss}>
+              <Pie></Pie>
+          </div>
+          <div className={css.itemBoxCss}>
+              <Pie></Pie>
+          </div>
+          <div className={css.itemBoxCss}>
+              <Pie></Pie>
+          </div> */}
         {
-          attendanceData.map((item)=>{
+          attendanceData.map((item,index)=>{
             return(
-              <div className={css.itemBoxCss}>
-                <div>
-                  {item.name}
-                  <div className={css.textCss}>
-                    {item.value}
-                  </div>
-                </div>
+              <div className={css.itemBoxCss} key={index}>
+                <Pie name={item.name} data={item.data}  value = {item.value}>
+                </Pie>
               </div>
+              // <div className={css.itemBoxCss}>
+              //   <div>
+              //     {item.name}
+              //     <div className={css.textCss}>
+              //       {item.value}
+              //     </div>
+              //   </div>
+              // </div>
             )
           })
         }
