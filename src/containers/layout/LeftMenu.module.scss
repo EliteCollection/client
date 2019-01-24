@@ -1,13 +1,13 @@
-@import'../../styles/variable.scss';
+@import'../../styles/variables.scss';
 .menu{
-  border-radius: 5px;
+  border-radius: $radiusSize;
   width: 200px;
   background: #fff;
   padding: 15px 0;
   line-height: 2.6;
   overflow: hidden;
   overflow-y: scroll;
-  color:#aaa;
+  color: $grayText;
 }
 .menuTitle{
   padding-left: 20px;

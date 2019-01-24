@@ -12,8 +12,8 @@
 
 //定位上下居中
 @mixin yCenter {
-position: absolute;
-top: 50%;
+  position: absolute;
+  top: 50%;
   transform: translateY(-50%);
 }
 
@@ -26,8 +26,8 @@ left: 50%;
 
 //定位上下左右居中
 @mixin xyCenter {
-position: absolute;
-top: 50%;
+  position: absolute;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }

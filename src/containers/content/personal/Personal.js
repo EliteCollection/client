@@ -4,7 +4,10 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import styles from './Personal.module.scss'
 
-import ShortcutEntry from './ShortcutEntry'
+import MyInformation from './MyInformation'
+import MyAttendance from './MyAttendance'
+import { Divider } from 'antd';
+
 export class Personal extends Component {
   static propTypes = {
     theme: PropTypes.string
@@ -13,9 +16,12 @@ export class Personal extends Component {
   render() {
     return (
       <div className={styles.personalCss}>
-        <div className="title">快捷入口</div>
-        <ShortcutEntry></ShortcutEntry>
-        <div className="title">考勤统计</div>
+        {/* <Divider orientation="left" style={{fontSize: '13px', color: '#999'}}>个人资料</Divider> */}
+        <div className="title">个人资料</div>
+        <MyInformation></MyInformation>
+        {/* <Divider orientation="left" style={{fontSize: '13px', marginTop: '50px', color: '#999'}}>数据总览</Divider> */}
+        <div className="title">数据总览</div>
+        <MyAttendance></MyAttendance>
       </div>
     )
   }

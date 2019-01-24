@@ -1,0 +1,27 @@
+@import'../../styles/variables.scss';
+.itemBoxCss{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.titleCss{
+  font-size: 18px;
+  margin-top:15px;
+}
+.centerNumCss{
+  z-index: 9;
+  position: absolute;
+  font-size: 16px;
+  color:$primary;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%)
+}
+.pieBoxCss{
+  width: 80%;
+  height: 80%;
+  position: relative;
+}
