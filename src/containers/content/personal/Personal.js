@@ -6,7 +6,6 @@ import styles from './Personal.module.scss'
 
 import MyInformation from './MyInformation'
 import MyAttendance from './MyAttendance'
-import { Divider } from 'antd';
 
 export class Personal extends Component {
   static propTypes = {

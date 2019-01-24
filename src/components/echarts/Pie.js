@@ -24,7 +24,6 @@ export class Pie extends Component {
     name: PropTypes.string
   }
   componentDidMount() {
-    const { value } = this.props
     const pieChart = echarts.init(document.getElementById(this.randomId));
     pieChart.setOption({
       title : {

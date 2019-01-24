@@ -84,17 +84,9 @@ export class MyAttendance extends Component {
               defaultValue={moment(defaultDay, weekFormat)}
               placeholder="Select week" /> : null}
           </div>
+          <div style={{width: '132px'}}></div>
         </div>
         <div className={css.contentCss}>
-          {/* <div className={css.itemBoxCss}>
-              <Pie></Pie>
-          </div>
-          <div className={css.itemBoxCss}>
-              <Pie></Pie>
-          </div>
-          <div className={css.itemBoxCss}>
-              <Pie></Pie>
-          </div> */}
         {
           attendanceData.map((item,index)=>{
             return(
@@ -102,14 +94,6 @@ export class MyAttendance extends Component {
                 <Pie name={item.name} data={item.data}  value = {item.value}>
                 </Pie>
               </div>
-              // <div className={css.itemBoxCss}>
-              //   <div>
-              //     {item.name}
-              //     <div className={css.textCss}>
-              //       {item.value}
-              //     </div>
-              //   </div>
-              // </div>
             )
           })
         }
