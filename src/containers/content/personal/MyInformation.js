@@ -20,7 +20,8 @@ export class MyInformation extends Component {
             <div className={css.basicInfoCss}>
               <div className={css.username}>
                 <div>
-                  <span className={css.nameText}>项洁洁</span> (技术人员)
+                  <span className={css.nameText}>项洁洁</span>
+                  <span className={css.nameOrigin}>(技术人员)</span>
                 </div>
                 <div className={css.editCss}>
                   <Icon type='edit'></Icon> 修改
@@ -45,8 +46,8 @@ export class MyInformation extends Component {
           </div>
         </div>
         <div className={css.botContentCss}>
-          <div className={css.titleCss}>
-              <div>
+          <div>
+              <div className={css.titleCss}>
                 <Divider type="vertical" style={{background: '#555'}} />基本信息
               </div>
               <div className={css.flexContent}>
@@ -82,7 +83,7 @@ export class MyInformation extends Component {
                   地址：皖安庆桐城市孔城镇陶泥村万庄队
                 </div>
               </div>
-              <div>
+              <div className={css.titleCss}>
                 <Divider type="vertical"  style={{background: '#555'}}  />教育信息
               </div>
               <div className={css.flexContent}>

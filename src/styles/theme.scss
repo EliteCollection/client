@@ -1,0 +1,23 @@
+
+
+@import'./variables.scss';
+.light{
+  background: $lightBg;
+  color:$darkText;
+  .bd{
+    border: 1px solid #eee;
+  }
+  .bd-bottom{
+    border-bottom: 1px solid #eee;
+  }
+}
+.dark{
+  background:$darkBg;
+  color:$lightText;
+  .bd{
+    border: 1px solid #666;
+  }
+  .bd-bottom{
+    border-bottom: 1px solid #666;
+  }
+}

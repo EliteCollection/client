@@ -19,7 +19,7 @@ export class App extends Component {
   render() {
     const { content, page } = styles
     return (
-      <div className={page}>
+      <div className={`${page} dark`}>
         <Header></Header>
         <div className={content}>
           <LeftMenu></LeftMenu>

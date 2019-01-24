@@ -45,7 +45,7 @@ export class Header extends Component {
       </Menu>
     )
     return (
-      <div className={header}>
+      <div className={header + ' bd-bottom'}>
         <div className={lf}>
           <div className={logo}></div>
           <div className={name}>旗开俱乐部</div>

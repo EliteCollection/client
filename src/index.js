@@ -15,6 +15,8 @@ import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 // 异步
 import thunkMiddleware from 'redux-thunk'
 import { createLogger } from 'redux-logger'
+
+import './styles/theme.scss'
 // 设置语言
 import moment from 'moment';
 import 'moment/locale/zh-cn';

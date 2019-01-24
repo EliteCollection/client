@@ -37,7 +37,7 @@ export class LeftMenu extends Component {
     const activeMenuPath = this.state.activeMenuPath || '/personal'
     let array = require('../../mockdata/menu')
     return (
-        <div className={menu}>
+        <div className={menu +' bd'}>
           {
             array.map( (item,index) => {
               return (
