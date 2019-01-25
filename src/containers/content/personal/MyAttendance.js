@@ -63,12 +63,12 @@ export class MyAttendance extends Component {
       <div className={css.attendanceCss}>
         <div className={css.headerCss}>
           <Radio.Group value={type} onChange={(val) => this.handleSizeChange(val)}>
-            <Radio.Button value="year">年</Radio.Button>
-            <Radio.Button value="month">月</Radio.Button>
-            <Radio.Button value="week">周</Radio.Button>
+            <Radio.Button   className={css.darkBtn}  value="year">年</Radio.Button>
+            <Radio.Button className={css.darkBtn} value="month">月</Radio.Button>
+            <Radio.Button  className={css.darkBtn}  value="week">周</Radio.Button>
           </Radio.Group>
           <div className = {css.pickerCss}>
-            {type === 'year' ? <RangePicker onOpenChange = {this.onOpenChange}
+            {type === 'year' ? <RangePicker className={css.darkBtn}  onOpenChange = {this.onOpenChange}
               onChange={this.onChange}
               disabledDate={this.disabledStartDate}
               defaultValue={[moment(defaultYear[0], dateFormat), moment(defaultYear[1], dateFormat)]}
