@@ -11,6 +11,7 @@ export class MyInformation extends Component {
 
   render() {
     const userType = this.props.userType === 'boy' ? css.boy : css.girl
+    const contentCss = this.props.theme === 'light' ? css.flexContent : `${css.flexContent} ${css.dark}`
     return (
       <div className={css.informationCss}>
         <div className={css.topContentCss}>
@@ -50,7 +51,7 @@ export class MyInformation extends Component {
               <div className={css.titleCss}>
                 <Divider type="vertical" style={{background: '#555'}} />基本信息
               </div>
-              <div className={css.flexContent}>
+              <div className={contentCss}>
                 <div>
                   年龄：21
                 </div>
@@ -61,7 +62,7 @@ export class MyInformation extends Component {
                   地址：皖安庆桐城市孔城镇陶泥村万庄队
                 </div>
               </div>
-              <div className={css.flexContent}>
+              <div className={contentCss}>
                 <div>
                   年龄：21
                 </div>
@@ -72,7 +73,7 @@ export class MyInformation extends Component {
                   地址：皖安庆桐城市孔城镇陶泥村万庄队
                 </div>
               </div>
-              <div className={css.flexContent}>
+              <div className={contentCss}>
                 <div>
                   年龄：21
                 </div>
@@ -86,7 +87,7 @@ export class MyInformation extends Component {
               <div className={css.titleCss}>
                 <Divider type="vertical"  style={{background: '#555'}}  />教育信息
               </div>
-              <div className={css.flexContent}>
+              <div className={contentCss}>
                 <div>
                   年龄：21
                 </div>
@@ -97,7 +98,7 @@ export class MyInformation extends Component {
                   地址：皖安庆桐城市孔城镇陶泥村万庄队
                 </div>
               </div>
-              <div className={css.flexContent}>
+              <div className={contentCss}>
                 <div>
                   年龄：21
                 </div>
@@ -118,7 +119,7 @@ export class MyInformation extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  
+  theme : state.config.theme
 })
 
 const mapDispatchToProps = {

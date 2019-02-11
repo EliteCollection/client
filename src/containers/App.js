@@ -14,12 +14,12 @@ export class App extends Component {
     theme: PropTypes.string,
   }
   componentDidMount() {
-    this.props.updateConfig({theme: 'white'})
+    this.props.updateConfig({theme: 'light'})
   }
   render() {
     const { content, page } = styles
     return (
-      <div className={`${page} dark`}>
+      <div className={`${page} ${this.props.theme}`}>
         <Header></Header>
         <div className={content}>
           <LeftMenu></LeftMenu>
