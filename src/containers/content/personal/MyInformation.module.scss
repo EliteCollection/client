@@ -37,12 +37,14 @@
         color:$primary;
         cursor: pointer;
       }
-      color: $grayText;
       .nameText{
         margin-right: 8px;
-        color: $content;
+      }
+      .nameOrigin{
+        color: $grayText;
       }
     }
+    
     .line{
       border-top: 1px solid #eee;
       height: 1px;
@@ -72,14 +74,17 @@
   margin-left: 5px;
   .flexContent{
     padding:20px;
-    color: $content;
     border-radius: $radiusSize;
     margin: 20px 15px;
-    background: $bg;
+    // background: rgba(60, 70, 80, .3);
+    background: rgba(220, 220, 220, .3);
     display: flex;
     justify-content: space-between;
-
+    &.dark{
+      background: rgba(60, 70, 80, .3);
+    }
   }
+  
 }
 
 

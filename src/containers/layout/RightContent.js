@@ -28,7 +28,7 @@ export class RightContent extends Component {
   render() {
     const { content } = styles
     return (
-      <div className={content}>
+      <div className={content + ' bd'}>
         <Switch>
           <Route path='/personal' component={Personal}/>
           <Route path='/personnelCount' component={PersonnelCount}/>
